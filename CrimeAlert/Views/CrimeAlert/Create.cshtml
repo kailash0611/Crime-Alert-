@@ -1,0 +1,121 @@
+﻿@model CrimeAlert.Models.user_crimeAlert
+
+@{
+    ViewData["Title"] = "Add Alert";
+
+}
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Crime Reporting App</title>
+    <link rel="stylesheet" type="text/css" href="~/css/crimealert.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+</head>
+
+<body>
+
+  
+
+
+    <div class="container">
+        <h1>
+            @if (ViewData["isAdmin"] != null && (int)ViewData["isAdmin"] == 1)
+            {
+                <h1>Welcome, Admin!</h1>
+            }
+            else
+            {
+                <h1>Welcome, User!</h1>
+            }
+        </h1>
+        <div class="form-box">
+            <br />
+            <a asp-action="Index" id="list">Back to Crime List</a>
+            <h1>CRIME ALERT</h1>
+
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+
+                <div class="form-group">
+
+                    <div class="input-field">
+                        <i class="fa-solid fa-user"></i>
+                        @*<label asp-for="CrimeType" class="control-label"></label>*@
+                        <input asp-for="CrimeType" type="text" placeholder="Crime Type">
+                        <span asp-validation-for="CrimeType" class="text-danger"></span>
+                    </div>
+
+                    <div class="input-field">
+                        <i class="fa-regular fa-calendar-days"></i>
+                        @*<label asp-for="Time" class="control-label"></label>*@
+                        <input type="datetime-local" asp-for="TimeNew" placeholder="Time">
+                        <span asp-validation-for="TimeNew" class="text-danger"></span>
+
+                    </div>
+                    <br />
+                    <div class="input-field">
+                        <label asp-for="Gender" class="control-label"></label>
+                        <span asp-validation-for="Gender" class="text-danger"></span>
+                        <select name="Gender" asp-for="Gender" class="form-control" placeholder="Criminal-Gender">
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Unknown">Unknown</option>
+                        </select>
+                        <br />
+                    </div>
+                    <div class="input-field">
+                        <i class="fa-solid fa-user"></i>
+                        @* <label asp-for="CrimeDescription" class="control-label"></label>*@
+                        <input asp-for="CrimeDescription" type="text" placeholder="Describe in short">
+                        <span asp-validation-for="CrimeDescription"></span>
+                    </div>
+
+                    <div class="input-field">
+                        <i class="fa-solid fa-user"></i>
+                        @*<label asp-for="Location" class="control-label"></label>*@
+                        <input type="text" asp-for="Location" placeholder="Location co ords" id="crimeloc">
+                        <span asp-validation-for="Location"></span>
+                    </div>
+
+                    <section class="map">
+
+                        <h4>Select Location on Map</h4>
+                        <div id="crime-map">
+                        </div>
+                        <div class="btn-field">
+                            <input type="submit" id="submit" value="Create" class="btn btn-primary" />
+                        </div>
+                    </section>
+
+
+
+                </div>
+
+
+            </form>
+            <div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ... -->
+    <!-- ... -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="~/js/crimealert.js"></script>
+    <script src="CrimeAlert.js"></script>
+</body>
+</html>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

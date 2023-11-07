@@ -1,0 +1,266 @@
+﻿@model IEnumerable<CrimeAlert.Models.user_crimeAlert>
+@{
+    var R = 0;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/dashboard.css">
+    <title>Dashboard</title>
+    <script src="https://kit.fontawesome.com/1bef438ca8.js" crossorigin="anonymous"></script>
+    <script src="~/JavaScript.js"></script>
+
+</head>
+
+<body>
+
+    @{
+        if (ViewData["isAdmin"] != null && (int)ViewData["isAdmin"] == 1)
+        {
+            <div class="overlay" id="myOverlay">
+                <div class="popup-content">
+                    <span class="close-button" onclick="closePopup()">&times;</span>
+
+                    @foreach (var item in Model)
+                    {
+                        var currentTime = DateTime.Now;
+                        var previousHour = currentTime.AddHours(-3);
+                        var itemTime = item.TimeNew;
+
+
+                        if (itemTime > previousHour && itemTime <= currentTime)
+                        {
+                            R++;
+                            <div>
+                                Alert: @item.CrimeType has been reported in
+                                <a style="color: #99b9e9" href="@item.Location">@item.Location</a> at
+                                @item.TimeNew.ToString("hh:mm tt")
+                            </div>
+                        }
+
+                    }
+                    @if (R == 0)
+                    {
+                        <div>No crime has been reported in the previous hour</div>
+                    }
+
+
+
+                </div>
+            </div>
+        }
+    }
+    <div class="side-menu">
+        <div class="brand-name">
+            <a href="admin_home"><h1>Legal Buzzer</h1></a>
+        </div>
+        <ul>
+            <li>
+                <a style="color:black" href="AddCriminal"><i class="fa-solid fa-handcuffs" style="color: #000000;"></i>&nbsp;</a>
+                <span style="color:#3f3f3a"><a style="color:black" href="AddCriminal">Criminals</a> </span>
+            </li>
+
+            <li>
+                <img src="~/Dashboard_img/policeicon.png" alt="" height="25px" width="25px">&nbsp;
+                <span style="color:#3f3f3a">Police Officers</span>
+            </li>
+
+            <li>
+                <i class="fa-solid fa-building-shield" style="color: #000000;"></i>&nbsp;
+                <span style="color:#3f3f3a">Police Stations</span>
+            </li>
+
+            <li>
+                <a style="color:black" href="Crimealert"><img src="~/Dashboard_img/criminalicon.png" alt="" height="25px" width="25px">&nbsp;</a>
+                <span style="color:#3f3f3a"><a style="color:black" href="Crimealert">Crimes</a></span>
+            </li>
+
+            <li>
+                <a style="color:black;cursor:pointer;" onclick="confirmLogout()"><i class="fa-solid fa-gear" style="color: #000000;"></i>&nbsp;</a>
+                <span style="color:#3f3f3a"><a style="color:black;cursor:pointer;" onclick="confirmLogout()">Log out</a></span>
+            </li>
+
+        </ul>
+    </div>
+    <div class="container">
+        <div class="header">
+            <div class="nav">
+                <div class="user">
+                    <a href=" Addcriminals/Create" class="btn">Add Crminals</a>
+                    <i class="fas fa-bell" id="bell-icon"></i>
+                    <div class="user-img">
+
+                        <button onclick="confirmLogout()">
+                            <img src="~/Dashboard_img/usericon.png" alt="" height="20px" width="20px" />
+
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="cards">
+                <div class="card">
+                    <div class="box">
+                        <h1>2194</h1>
+                        <h3>Criminal<br />Count</h3>
+                    </div>
+                    <div class="icon-case">
+                        <img src="~/Dashboard_img/criminalicon.png" alt="">
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <h1>53</h1>
+                        <h3>Police<br />Officers</h3>
+                    </div>
+                    <div class="icon-case">
+                        <img src="~/Dashboard_img/policeicon.png" alt="">
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <h1>5</h1>
+                        <h3>Police<br />stations</h3>
+                    </div>
+                    <div class="icon-case">
+                        <img src="~/Dashboard_img/policestation.jpg" alt="">
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <h1>
+                            @if (Model.Any())
+                            {
+                                @Model.Last().Id
+                            }
+                        </h1>
+                        <h3>Total<br />Crimes</h3>
+                    </div>
+                    <div class="icon-case">
+                        <img src="~/Dashboard_img/crimecount.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="content-2">
+                <div class="new-alerts">
+                    <div class="title">
+                        <h2>New Alerts</h2>
+                        <a href="crimealert" class="btn">View All</a>
+                    </div>
+                    <div class="table-responsive">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.CrimeType)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Location)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Gender)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.TimeNew)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.CrimeDescription)
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.CrimeType)
+                                        </td>
+                                        <td>
+                                            <a href=" @Html.DisplayFor(modelItem => item.Location)">
+                                                @Html.DisplayFor(modelItem => item.Location)
+                                            </a>
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Gender)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.TimeNew)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.CrimeDescription)
+                                        </td>
+                                        <td>
+                                            @*                <a asp-controller="CrimeAlertController" asp-action="Edit" asp-route-id="@item.Id">Edit</a>*@
+                                            <a href="crimealert">Details</a>
+                                            @* <a href="CrimeAlert_delete">Delete</a>*@
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script>
+
+        function showPopup() {
+            var overlay = document.getElementById("myOverlay");
+            overlay.style.display = "block";
+        }
+
+        function closePopup() {
+            var overlay = document.getElementById("myOverlay");
+            overlay.style.display = "none";
+        }
+
+        window.onload = showPopup();
+        function toggleAlerts() {
+            var alerts = document.querySelectorAll(".overlay");
+            for (var i = 0; i < alerts.length; i++) {
+                var overlay = alerts[i];
+                overlay.style.display = overlay.style.display === "block" ? "none" : "block";
+            }
+        }
+        document.getElementById("bell-icon").addEventListener("click", function () {
+            toggleAlerts();
+        });
+
+        window.onload = function () {
+        @if (ViewData["isAdmin"] != null && (int)ViewData["isAdmin"] == 1)
+        {
+            foreach (var item in Model)
+            {
+                var currentTime = DateTime.Now;
+                var previousHour = currentTime.AddHours(-1);
+                var itemTime = item.TimeNew;
+
+                if (itemTime > previousHour && itemTime <= currentTime)
+                {
+                    <text>showPopup(@item.Id); </text>
+                }
+            }
+        }
+                                                }
+        function confirmLogout() {
+            var userConfirmed = confirm("Are you sure you want to log out?");
+            if (userConfirmed) {
+
+                window.location.href = "logout";
+            } else {
+            }
+        }
+    </script>
+</body>
+
+</html>

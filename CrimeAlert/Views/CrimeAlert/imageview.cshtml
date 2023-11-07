@@ -1,0 +1,11 @@
+﻿@model List<ImageModel>
+
+<h2>Images</h2>
+
+@foreach (var image in Model)
+{
+    <div>
+        <img src='@Url.Action("GetImage", "Image", new { id = image.Id })' alt="@image.Name" />
+        <p>@image.Name</p>
+    </div>
+}

@@ -1,0 +1,63 @@
+﻿@model CrimeAlert.Models.admin_addcriminals
+
+@{
+    ViewData["Title"] = "Criminal's Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4> Criminal's Details </h4>
+    <hr />
+    <dl class="row">
+        <dd>
+            <span>Pictures</span>
+            <img src="@Url.Content(@Model.PictureUrl)" style="width:80px;height:80px;border:1px solid black;border-radius" />
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Crime)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Crime)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CriminalName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CriminalName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Gender)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Gender)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Age)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Age)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CrimeDescription)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CrimeDescription)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+    </dl>
+</div>
+<div>
+    @if (ViewData["isAdmin"] != null && (int)ViewData["isAdmin"] == 1)
+    {
+        <a asp-action="Edit" asp-route-id="@Model?.case_ID">Edit</a>
+    }
+    |
+    <a asp-action="Index">Back to List</a>
+</div>

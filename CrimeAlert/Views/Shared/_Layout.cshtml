@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - CrimeAlert</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/CrimeAlert.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                @if (ViewData["isAdmin"] != null && (int)ViewData["isAdmin"] == 1)
+                {
+                    <a class="navbar-brand" href="admin_home">LegalBuzzer</a>
+                }
+                else
+                {
+                    <a class="navbar-brand" href="user_home">LegalBuzzer</a>
+                }
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+
+                            @if (ViewData["isAdmin"] != null && (int)ViewData["isAdmin"] == 1)
+                            {
+                                <a class="nav-link text-dark" href="admin_home">Home</a>
+                            }
+                            else
+                            {
+                                <a class="nav-link text-dark" href="user_home">Home</a>
+                            }
+                        </li>
+                        <li class="nav-item">
+                        <li>
+                            <button style="border: none; background: white;margin-top: 7px;" class="emergency-button" onclick="confirmLogout()">
+                                Log Out
+                            </button>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2023 - CrimeAlert - <a href="aboutus">AboutUs</a>
+        </div>
+    </footer>
+    <script>
+        function confirmLogout() {
+            var userConfirmed = confirm("Are you sure you want to log out?");
+            if (userConfirmed) {
+
+                window.location.href = "logout";
+            }
+        }
+    </script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

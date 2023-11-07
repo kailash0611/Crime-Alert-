@@ -1,0 +1,135 @@
+﻿@model CrimeAlert.Models.admin_addcriminals
+
+@{
+    ViewData["Title"] = "Add Criminals";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@*<script src="~/js/JavaScript.js"></script>*@
+<h1>Create Criminal's Profile</h1>
+<p>Welcome, Admin!</p>
+
+<h4>Add criminal's Data</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" enctype="multipart/form-data" asp-action="UploadImage" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Crime" class="control-label"></label>
+                <input asp-for="Crime" class="form-control" />
+                <span asp-validation-for="Crime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CriminalName" class="control-label"></label>
+                <input asp-for="CriminalName" class="form-control" />
+                <span asp-validation-for="CriminalName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PictureUrl" class="control-label"></label>
+                <input type="file" name="imageFile" class="form-control" accept="images/*" />
+                <span asp-validation-for="PictureUrl" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Gender" class="control-label"></label>
+                <input asp-for="Gender" class="form-control" />
+                <span asp-validation-for="Gender" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Age" class="control-label"></label>
+                <input asp-for="Age" class="form-control" />
+                <span asp-validation-for="Age" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CrimeDescription" class="control-label"></label>
+                <input asp-for="CrimeDescription" class="form-control" />
+                <span asp-validation-for="CrimeDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Status" class="control-label"></label>
+                <input asp-for="Status" class="form-control" />
+                <span asp-validation-for="Status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to Criminals List</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const storedImages = JSON.parse(localStorage.getItem("images")) || [];
+
+        if (storedImages.length > 0) {
+            const imageRows = document.getElementById("imageRows");
+
+            storedImages.forEach((imgData) => {
+                const newRow = imageRows.insertRow();
+                const cell1 = newRow.insertCell(0);
+                const cell2 = newRow.insertCell(1);
+                const cell3 = newRow.insertCell(2);
+                const cell4 = newRow.insertCell(3);
+                const cell5 = newRow.insertCell(4);
+                const cell6 = newRow.insertCell(5);
+                /*   const cell7 = newRow.insertCell(6);*/
+
+                cell1.innerHTML = `<img class="imgPreview" src="${imgData}" style="max-height: 100px;" alt="Preview">`;
+                cell2.innerHTML = "";
+                cell3.innerHTML = "";
+                cell4.innerHTML = "";
+                cell5.innerHTML = "";
+                cell6.innerHTML = "";
+                /*        cell7.innerHTML = `<button class="delete-row" onclick="deleteRow(this)">Delete</button>`;*/
+            });
+        }
+    });
+
+    document.querySelector("#myFileInput").addEventListener("change", function () {
+        const reader = new FileReader();
+
+        reader.addEventListener("load", () => {
+            const newRow = imageRows.insertRow();
+            const cell1 = newRow.insertCell(0);
+            const cell2 = newRow.insertCell(1);
+            const cell3 = newRow.insertCell(2);
+            const cell4 = newRow.insertCell(3);
+            const cell5 = newRow.insertCell(4);
+            const cell6 = newRow.insertCell(5);
+            /*        const cell7 = newRow.insertCell(6);*/
+
+            cell1.innerHTML = `<img class="imgPreview" src="${reader.result}" style="max-height: 100px;" alt="Preview">`;
+            cell2.innerHTML = "";
+            cell3.innerHTML = "";
+            cell4.innerHTML = "";
+            cell5.innerHTML = "";
+            cell6.innerHTML = "";
+            /*     cell7.innerHTML = `<button class="delete-row" onclick="deleteRow(this)">Delete</button>`;*/
+
+            const storedImages = JSON.parse(localStorage.getItem("images")) || [];
+            storedImages.push(reader.result);
+            localStorage.setItem("images", JSON.stringify(storedImages));
+        });
+
+        reader.readAsDataURL(this.files[0]);
+    });
+
+    function deleteRow(button) {
+        const row = button.parentElement.parentElement;
+        row.remove();
+        const storedImages = JSON.parse(localStorage.getItem("images")) || [];
+        const imgSrc = row.cells[0].querySelector("img").src;
+        const index = storedImages.indexOf(imgSrc);
+        if (index > -1) {
+            storedImages.splice(index, 1);
+            localStorage.setItem("images", JSON.stringify(storedImages));
+        }
+    }</script>

@@ -1,0 +1,172 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/aboutus.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>ABOUT US</title>
+</head>
+
+<body>
+    <div class="backhome">
+        @if (ViewData["isAdmin"] != null && (int)ViewData["isAdmin"] == 1)
+        {
+            <a class="nav-link text-dark" href="admin_home"><i class="fa-solid fa-arrow-left"></i></a>
+        }
+        else
+        {
+            <a class="nav-link text-dark" href="user_home"><i class="fa-solid fa-arrow-left"></i></a>
+        }
+    </div>
+    <div class="heading">
+        <h1>ABOUT US</h1>
+       
+        <p>Empowering safety, One Alert at a Time, LEGAL BUZZER is your ultimate safety companion.</p>
+    </div>
+    <div class="container">
+        <section class="about">
+            <div class="about-image">
+                <img src="~/crime.jpg">
+            </div>
+            <div class="about-content">
+                <h2>Welcome to our Crime Alert Website, where your safety is our top priority.</h2>
+                <p>
+                    We believe that being informed is the first line of defense against crime. Our platform is dedicated
+                    to keeping you and your community safe by providing real-time, location-based crime alerts and
+                    updates.
+                    With our user-friendly interface, you can easily access the latest information on criminals in your
+                    area, allowing you to make informed decisions to protect yourself and your loved ones.
+                    We are committed to promoting community safety and fostering a sense of unity and vigilance. Join us
+                    in creating a safer, more secure environment for all, and together, we can be a force for positive
+                    change.
+                    Stay informed, stay safe with our Crime Alert website.
+                </p>
+
+                <button class="read-more-btn" onclick="toggleReadMore()">Read More</button>
+            </div>
+        </section>
+        <section class="read-more">
+            <h3>How to use the website?</h3><br>
+            <p>1.INTRODUCTION</p><br>
+
+            <li>Crime Awareness: Stay informed about recent crimes and suspicious activities in your area.</li><br>
+
+            <li>
+                Incident Reporting: Easily report incidents to alert others and local authorities, contributing to
+                quicker response times.
+            </li><br>
+
+            <li>
+                Community Engagement: Connect with your neighbors and share safety tips, fostering a sense of
+                community
+                and collaboration.
+            </li><br>
+
+            <li>
+                Personalized Alerts: Customize alerts to receive updates on specific types of incidents in your
+                vicinity.
+            </li><br>
+
+            <p>2.CREATING AN ACCOUNT</p><br>
+
+            <li>
+                Find the "Sign Up" Button: On the website's homepage, look for a prominent "Sign Up" or "Register"
+                button. Click on it to start the registration process.
+            </li><br>
+
+
+
+            <li>
+                Provide Basic Information:
+                You will be directed to a registration form. Fill in the required information, including your:
+                Full Name
+                Email Address
+                Create a Strong Password
+            </li><br>
+
+            <li>
+                Submit the Registration Form:
+                After filling out the form and agreeing to the terms, click the "Submit" or "Sign Up" button.
+            </li>
+            <br>
+
+            <li>
+                Account Created: Congratulations, your account is now created, and you can log in using your email
+                address and the password you created during registration.
+            </li><br>
+
+            <p>3.LOGGING IN</p><br>
+
+            <li>
+                Locate the "Log In" Option: On the website's homepage, find the "Log In" or "Sign In" button. Click
+                on
+                it to access the login page.
+            </li><br>
+
+            <li>
+                Enter Your Credentials:
+
+                In the provided login form, enter your:
+                Registered Email Address
+                Password
+            </li><br>
+
+            <li>
+                Access Your Account: Once the website verifies your credentials, you will be logged into your account,
+                and you can access your dashboard and other features.
+            </li><br>
+
+            <p>4.ADD ALERT</p><br>
+
+            Incident Details:<br><br>
+
+            <li>
+                You will be prompted to provide details about the incident. Include the following information:
+                Type of incident (e.g., theft, vandalism, assault).
+                Date and time of the incident.
+                Location of the incident (you may be able to use a map tool to pinpoint the location).
+                A brief description of what happened.
+            </li><br>
+
+            <p>5.VIEW CRIMINALS</p><br>
+
+            Criminal Details:<br><br>
+            <li>
+                You will be provided detailed list of criminals in your locality.Include the following information:
+                Image of the Criminal.
+                Name of the Criminal.
+                Crime type,Gender,Age of the Criminal.
+                A brief description of the crime.
+            </li>
+
+
+        </section>
+    </div>
+
+    <script>
+        function toggleReadMore() {
+            var readMoreContent = document.querySelector(".read-more");
+            var readMoreButton = document.querySelector(".read-more-btn");
+
+            if (readMoreContent.style.display === "none" || readMoreContent.style.display === "") {
+                readMoreContent.style.display = "block";
+                readMoreButton.innerText = "Read Less";
+            } else {
+                readMoreContent.style.display = "none";
+                readMoreButton.innerText = "Read More";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

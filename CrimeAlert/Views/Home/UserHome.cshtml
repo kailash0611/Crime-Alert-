@@ -1,0 +1,93 @@
+﻿
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEGAL BUZZER</title>
+    <link rel="stylesheet" href="~/css/userAdmiinHome.css">
+    <script src="https://kit.fontawesome.com/463b079c62.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav>
+
+        <div class="logo">
+            <img src="~/logo_legalbuzzer.png">
+        </div>
+        <div class="burger-menu">
+            <div class="burger"><img src="~/hamburger.png"></img> </div>
+        </div>
+
+        <ul id="ul" class="header">
+            <li><a href="user_home">Home</a></li>
+            <li>
+                <button class="emergency-button">Emergency Contacts</button>
+                <ol id="ul" class="emergency-list">
+                    <li class="emergency-list">
+                        <strong>
+                            <i>Cyberpolice:123</i>
+                            <i>Police:100</i>
+                            <i>Bullying:123</i>
+                            <i>Female Helpline:100</i>
+                            <i>LegalBuzzer admin:100</i>
+                        </strong>
+                    </li>
+                </ol>
+            </li>
+            <li><a href="aboutus">About us</a></li>
+            <li><button class="emergency-button" onclick="confirmLogout()">Log Out</button></li>
+        </ul>
+
+        <div class="button">
+            <a href="CrimeAlert/Create" class="btn">REPORT CRIME </a>
+            <a href="AddCriminal" class="btn">VIEW CRIMINALS</a>
+        </div>
+
+    </nav>
+    <footer>
+        <p class="para">&copy; 2023 Legal Buzzer. All Rights Reserved.</p>
+
+        <p class="para">
+            Contact us: contact@legalbuzzer.com
+            <a class="social-icons1" href="www.facebook.com/LegalBuzzer" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a class="social-icons2" href="www.instagram.com/LegalBuzzer" target="_blank"><i class="fab fa-instagram"></i></a>
+        </p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const burgerMenu = document.querySelector('.burger-menu');
+            const navLinks = document.querySelector('.header');
+
+            burgerMenu.addEventListener('click', function () {
+                navLinks.classList.toggle('show');
+            });
+        });
+        $(document).ready(function () {
+            let timeoutId;
+
+            $('.emergency-button, .emergency-list').hover(
+                function () {
+                    clearTimeout(timeoutId);
+                    $('.emergency-list').stop(true, true).fadeIn(200);
+                },
+                function () {
+                    timeoutId = setTimeout(function () {
+                        $('.emergency-list').fadeOut(1000);
+                    }, 1000);
+                }
+            );
+        });
+        function confirmLogout() {
+            var userConfirmed = confirm("Are you sure you want to log out?");
+            if (userConfirmed) {
+
+                window.location.href = "logout";
+            }
+        }
+
+    </script>
+</body>
+</html>

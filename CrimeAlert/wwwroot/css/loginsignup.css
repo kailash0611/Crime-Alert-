@@ -1,0 +1,297 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../bg_image1.jpg);
+    opacity: 0.7;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.role {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.form-box {
+    width: 90%;
+    max-width: 450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgb(250, 242, 133);
+    background-color: rgba(0, 0, 0, .50);
+    padding: 50px 60px 70px;
+    text-align: center;
+}
+
+    .form-box h1, h2 {
+        font-size: 30px;
+        margin-bottom: 60px;
+        color: white;
+        position: relative;
+    }
+
+        .form-box h1::after {
+            content: '';
+            width: 30px;
+            height: 4px;
+            border-radius: 3px;
+            background: #fefdff;
+            position: absolute;
+            bottom: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+.input-field {
+    background: #eaeaea;
+    margin: 15px 0;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+}
+
+input {
+    width: 100%;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    padding: 18px 43px;
+}
+
+.input-field i {
+    margin-left: 15px;
+    color: rgb(22, 21, 21);
+}
+
+form p {
+    color: #eaeaea;
+}
+
+    form p a {
+        text-decoration: none;
+        color: #eebd35;
+    }
+
+
+
+.btn-field button {
+    align-content: center;
+    flex-basis: 48%;
+    background: #3c00a0;
+    color: #fff;
+    width: 50%;
+    height: 40px;
+    border-radius: 40px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    transition: background 1s;
+}
+
+.input-group {
+    height: 450px;
+}
+
+.role {
+    color: #eaeaea;
+}
+
+nav {
+    width: 100%;
+    height: 75px;
+    line-height: 75px;
+    padding: 0px 100px;
+    position: fixed;
+    background-image: url(../bg_map.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+    nav .logo p {
+        font-size: 30px;
+        font-weight: bold;
+        float: left;
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        cursor: pointer;
+    }
+
+ul {
+    float: right;
+    list-style-type: none;
+}
+
+    ul li {
+        display: inline-block;
+        margin: 20px;
+    }
+
+        ul li a {
+            text-decoration: none;
+            color: rgb(12, 12, 12);
+            background-color: #fff;
+            padding: 10px 25px;
+            border: 2px solid #fff;
+            transition: 0.6s ease;
+        }
+
+            ul li a:hover {
+                background-color: rgb(158, 158, 158);
+                color: #000;
+            }
+
+.logo img {
+    float: left;
+    padding-top: 20px;
+    width: 150px;
+    height: auto;
+}
+
+.main {
+    max-width: 1650px;
+    margin: auto;
+}
+.eye-area {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+}
+
+.eye-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+i {
+    position: absolute;
+    color: #000;
+    cursor: pointer;
+}
+
+#eye, #eye-2 {
+    opacity: 1;
+}
+
+#eye-slash, #eye-slash2 {
+    opacity: 0;
+}
+@media screen and (max-width: 1024px) {
+    .form-box h1, h2 {
+        margin-bottom: 0px;
+        font-size: 25px;
+    }
+
+    .form-box {
+        margin-top: 0px;
+        max-width: 418px;
+    }
+
+    .role1 {
+        margin-top: 50px;
+        text-align: center;
+    }
+
+    .input-group {
+        margin-top: 30px;
+    }
+}
+.form-box h1::after{
+    width:0px;
+}
+
+@media screen and (max-width: 768px) {
+    .form-box {
+        width: 90%;
+    }
+
+    .input-field {
+        flex-basis: 100%;
+    }
+    .form-box h1::after {
+        width: 0px;
+    }
+}
+
+/ Navigation Styles /
+
+nav {
+    width: 100%;
+    height: 75px;
+    line-height: 75px;
+    padding: 2px 2px;
+    / Adjusted padding for smaller screens / position: fixed;
+    background-image: url(images/Map.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+
+@media screen and (max-width: 1000px) {
+    .btn {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .form-box {
+        width: 90%;
+        margin-top: 100px;
+    }
+
+    .input-field {
+        flex-basis: 100%;
+    }
+
+    .form-box h1, h2 {
+        margin-bottom: 0px;
+    }
+
+    .form-box {
+        margin-top: 0px;
+    }
+
+    .responsive-eye-icon {
+        font-size: 16px;
+    }
+}
+
+nav {
+    width: 100%;
+    height: 75px;
+    line-height: 75px;
+    padding: 2px 2px;
+    position: fixed;
+    background-image: url(images/Map.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+@media screen and (max-width: 250px) {
+    .form-box {
+        width: 90%;
+        margin-top: 100px;
+    }
+
+    .container {
+        height: 1200px;
+    }
+}
+
+

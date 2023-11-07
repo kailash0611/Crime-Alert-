@@ -1,0 +1,413 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\CrimeAlert.bundle.scp.css",
+      "PackagePath": "staticwebassets\\CrimeAlert.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\Dashboard_img\\crimecount.png",
+      "PackagePath": "staticwebassets\\Dashboard_img\\crimecount.png"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\Dashboard_img\\criminalicon.png",
+      "PackagePath": "staticwebassets\\Dashboard_img\\criminalicon.png"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\Dashboard_img\\dashboardicon.png",
+      "PackagePath": "staticwebassets\\Dashboard_img\\dashboardicon.png"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\Dashboard_img\\notificationicon.png",
+      "PackagePath": "staticwebassets\\Dashboard_img\\notificationicon.png"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\Dashboard_img\\policeicon.png",
+      "PackagePath": "staticwebassets\\Dashboard_img\\policeicon.png"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\Dashboard_img\\policestation.jpg",
+      "PackagePath": "staticwebassets\\Dashboard_img\\policestation.jpg"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\Dashboard_img\\policestationicon.png",
+      "PackagePath": "staticwebassets\\Dashboard_img\\policestationicon.png"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\Dashboard_img\\searchicon.png",
+      "PackagePath": "staticwebassets\\Dashboard_img\\searchicon.png"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\Dashboard_img\\usericon.png",
+      "PackagePath": "staticwebassets\\Dashboard_img\\usericon.png"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\Uploads\\1698821068116.JPEG",
+      "PackagePath": "staticwebassets\\Uploads\\1698821068116.JPEG"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\Uploads\\image_1.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\image_1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\alert.jpg",
+      "PackagePath": "staticwebassets\\alert.jpg"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\bg_homepage.jpg",
+      "PackagePath": "staticwebassets\\bg_homepage.jpg"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\bg_image1.jpg",
+      "PackagePath": "staticwebassets\\bg_image1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\bg_map.jpg",
+      "PackagePath": "staticwebassets\\bg_map.jpg"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\crime.jpg",
+      "PackagePath": "staticwebassets\\crime.jpg"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\css\\Adminhome.css",
+      "PackagePath": "staticwebassets\\css\\Adminhome.css"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\css\\StyleSheet.css",
+      "PackagePath": "staticwebassets\\css\\StyleSheet.css"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\css\\aboutus.css",
+      "PackagePath": "staticwebassets\\css\\aboutus.css"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\css\\alerts.css",
+      "PackagePath": "staticwebassets\\css\\alerts.css"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\css\\crimealert.css",
+      "PackagePath": "staticwebassets\\css\\crimealert.css"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\css\\dashboard.css",
+      "PackagePath": "staticwebassets\\css\\dashboard.css"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\css\\loginsignup.css",
+      "PackagePath": "staticwebassets\\css\\loginsignup.css"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\css\\userAdmiinHome.css",
+      "PackagePath": "staticwebassets\\css\\userAdmiinHome.css"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\hamburger.png",
+      "PackagePath": "staticwebassets\\hamburger.png"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\image_1.jpg",
+      "PackagePath": "staticwebassets\\image_1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\image_2.jpg",
+      "PackagePath": "staticwebassets\\image_2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\image_3.jpg",
+      "PackagePath": "staticwebassets\\image_3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\js\\JavaScript.js",
+      "PackagePath": "staticwebassets\\js\\JavaScript.js"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\js\\Scriptslogin.js",
+      "PackagePath": "staticwebassets\\js\\Scriptslogin.js"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\js\\crimealert.js",
+      "PackagePath": "staticwebassets\\js\\crimealert.js"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\lib\\details3.jpg",
+      "PackagePath": "staticwebassets\\lib\\details3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\lib\\details_3.jpg",
+      "PackagePath": "staticwebassets\\lib\\details_3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\lib\\detailsbg.jpg",
+      "PackagePath": "staticwebassets\\lib\\detailsbg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\lib\\detailsbg2.jpg",
+      "PackagePath": "staticwebassets\\lib\\detailsbg2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\admin\\source\\repos\\CrimeAlert\\CrimeAlert\\wwwroot\\logo_legalbuzzer.png",
+      "PackagePath": "staticwebassets\\logo_legalbuzzer.png"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.CrimeAlert.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.CrimeAlert.props",
+      "PackagePath": "build\\CrimeAlert.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.CrimeAlert.props",
+      "PackagePath": "buildMultiTargeting\\CrimeAlert.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.CrimeAlert.props",
+      "PackagePath": "buildTransitive\\CrimeAlert.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

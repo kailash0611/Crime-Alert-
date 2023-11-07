@@ -1,0 +1,81 @@
+﻿@model IEnumerable<CrimeAlert.Models.user_crimeAlert>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEGAL BUZZER</title>
+    <link rel="stylesheet" href="~/css/Adminhome.css">
+    <script src="https://kit.fontawesome.com/463b079c62.js" crossorigin="anonymous"></script>
+    <script src="//code.jquery.com/jquery.min.js"></script>
+    <script src="dist/js/bootstrap-msg.min.js"></script>
+    <script src="~/lib/signalr/dist/browser/signalr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/3.1.10/signalr.min.js"></script>
+
+
+
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <img src="~/logo_legalbuzzer.png">
+        </div>
+        <div class="burger-menu">
+            <div class="burger"><img src="~/hamburger.png"> </div>
+        </div>
+
+        <ul id="ul" class="header">
+            <li><a href="admin_home">Home</a></li>
+            <li><a href="Dashboard">Dashboard</a></li>
+            <li><a href="aboutus">About us</a></li>
+            <li><button class="emergency-button" onclick="confirmLogout()">Log Out</button></li>
+        </ul>
+
+        <div class="button">
+            <a href="AddCriminals/Create" class="btn">ADD CRIMINALS</a>
+            <a href="CrimeAlert" class="btn">VIEW ALERTS</a>
+        </div>
+
+    </nav>
+    <footer>
+        <p class="para">&copy; 2023 Legal Buzzer. All Rights Reserved.</p>
+
+        <p class="para">
+            Contact us: contact@legalbuzzer.com
+            <a class="social-icons1" href="www.facebook.com/legalBuzzer" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a class="social-icons2" href="www.instagram.com/legalBuzzer" target="_blank"><i class="fab fa-instagram"></i></a>
+        </p>
+
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const burgerMenu = document.querySelector('.burger-menu');
+            const navLinks = document.querySelector('.header');
+
+            burgerMenu.addEventListener('click', function () {
+                navLinks.classList.toggle('show');
+            });
+        });
+        Msg.warning('warning message', timeout);
+
+        function confirmLogout() {
+            var userConfirmed = confirm("Are you sure you want to log out?");
+            if (userConfirmed) {
+
+                window.location.href = "logout";
+            }
+        }
+
+    </script>
+    @if (ViewData["AlertMessage"] != null)
+    {
+        <script>
+            var alertMessage = "@ViewData["AlertMessage"]";
+            alert(alertMessage);
+        </script>
+    }
+</body>
+</html>

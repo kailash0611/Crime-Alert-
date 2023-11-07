@@ -1,0 +1,190 @@
+﻿@model IEnumerable<CrimeAlert.Models.admin_addcriminals>
+
+@{
+    ViewData["Title"] = "Criminal's List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@*<script src="~/js/JavaScript.js"></script>*@
+<style>
+    .imgPreview {
+        max-height: 100px;
+        max-width: 100px;
+    }
+    a{
+        color:black;
+    }
+
+    .table-responsive {
+        overflow-x: scroll;
+    }
+</style>
+
+<h1>List of Criminals</h1>
+@if (ViewData["isAdmin"] != null && (int)ViewData["isAdmin"] == 1)
+{
+    <p>
+        <a  asp-action="Create">Add criminal</a>
+
+    </p>
+}
+else
+{
+    <p>Welcome, User!</p>
+}
+<div class="table-responsive">
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Image
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Crime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CriminalName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Gender)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Age)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CrimeDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody id="imageRows">
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                  <img src="@Url.Content(item.PictureUrl)"  style="width:80px;height:80px;border:1px solid black;border-radius"/>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Crime)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CriminalName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Gender)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Age)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CrimeDescription)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Status)
+                </td>
+
+
+                <td>
+
+                    <a asp-action="Details" asp-route-id="@item.case_ID">Details</a> |
+                    @{
+                        if (ViewData["isAdmin"] != null && (int)ViewData["isAdmin"] == 1)
+                        {
+                            <a asp-action="Edit" asp-route-id="@item.case_ID">Edit|</a>
+                            <a asp-action="Delete" asp-route-id="@item.case_ID">Delete</a>
+                           
+                        }
+                    }
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+</div>
+
+<script>
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const storedImages = JSON.parse(localStorage.getItem("images")) || [];
+
+        if (storedImages.length > 0) {
+            const imageRows = document.getElementById("imageRows");
+
+            storedImages.forEach((imgData) => {
+                // Check if there is an existing row with an empty image cell
+                const existingRow = [...imageRows.rows].find((row) => row.cells[0].innerHTML.trim() === "");
+
+                if (existingRow) {
+                    const cell1 = existingRow.cells[0];
+                    cell1.innerHTML = `<img class="imgPreview" src="${imgData}" style="max-height: 100px;" alt="Preview">`;
+                } else {
+                    // If no existing row with an empty image cell, create a new row
+                    const newRow = imageRows.insertRow();
+                    const cell1 = newRow.insertCell(0);
+                    cell1.innerHTML = `<img class="imgPreview" src="${imgData}" style="max-height: 100px;" alt="Preview">`;
+
+                    // Add a delete button or anchor tag
+                    const deleteButton = document.getElementById("button");
+                    deleteButton.className = "delete-row";
+                    deleteButton.innerText = "Delete";
+                    deleteButton.addEventListener("click", () => deleteRow(newRow, imgData));
+                    const cell2 = newRow.insertCell(1);
+                    cell2.appendChild(deleteButton);
+                }
+            });
+        }
+    });
+
+    document.querySelector("#myFileInput").addEventListener("change", function () {
+        const reader = new FileReader();
+
+        reader.addEventListener("load", () => {
+            const imageRows = document.getElementById("imageRows");
+            const existingRow = [...imageRows.rows].find((row) => row.cells[0].innerHTML.trim() === "");
+
+            if (existingRow) {
+                const cell1 = existingRow.cells[0];
+                cell1.innerHTML = `<img class="imgPreview" src="${reader.result}" style="max-height: 100px;" alt="Preview>`;
+            } else {
+                // If no existing row with an empty image cell, create a new row
+                const newRow = imageRows.insertRow();
+                const cell1 = newRow.insertCell(0);
+                cell1.innerHTML = `<img class="imgPreview" src="${reader.result}" style="max-height: 100px;" alt="Preview">`;
+
+                const deleteButton = document.createElement("button");
+                deleteButton.className = "delete-row";
+                deleteButton.innerText = "Delete";
+                deleteButton.addEventListener("click", () => deleteRow(newRow, reader.result));
+                const cell2 = newRow.insertCell(1);
+                cell2.appendChild(deleteButton);
+            }
+
+            const storedImages = JSON.parse(localStorage.getItem("images")) || [];
+            storedImages.push(reader.result);
+            localStorage.setItem("images", JSON.stringify(storedImages));
+        });
+
+        reader.readAsDataURL(this.files[0]);
+    });
+
+    function deleteRow(row, imgData) {
+        const imageRows = document.getElementById("imageRows");
+        const storedImages = JSON.parse(localStorage.getItem("images")) || [];
+
+        // Removes the row from the DOM
+        imageRows.deleteRow(row.rowIndex - 1);
+
+        // Removes the image data from localStorage
+        const index = storedImages.indexOf(imgData);
+        if (index > -1) {
+            storedImages.splice(index, 1);
+            localStorage.setItem("images", JSON.stringify(storedImages));
+        }
+    }
+
+
+
+</script>

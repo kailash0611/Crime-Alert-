@@ -1,0 +1,53 @@
+﻿@model CrimeAlert.Models.user_crimeAlert
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Alert Details</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CrimeType)
+
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CrimeType)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Location)
+        </dt>
+        <dd class="col-sm-10">
+            <a href="@Html.DisplayFor(model => model.Location)">@Html.DisplayFor(model => model.Location)</a>
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Gender)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Gender)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.TimeNew)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TimeNew)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CrimeDescription)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CrimeDescription)
+        </dd>
+    </dl>
+</div>
+<div>
+    @if (ViewData["isAdmin"] != null && (int)ViewData["isAdmin"] == 0)
+    {
+        <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a>
+    }
+
+    <a asp-action="Index">Back to Alerts</a>
+</div>

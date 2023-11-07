@@ -1,0 +1,174 @@
+﻿@model IEnumerable<CrimeAlert.Models.user_crimeAlert>
+
+@{
+    ViewData["Title"] = "Crime Alert";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var R = 0;
+
+}
+<head>
+    <script src="//code.jquery.com/jquery.min.js"></script>
+    <script src="dist/js/bootstrap-msg.min.js"></script>
+    <link rel="stylesheet" href="~/css/alerts.css">
+  
+</head>
+<h1>Crime Alert</h1>
+
+@{
+    if ( (int) ViewData["isAdmin"] == 1 /*!= null && (int)ViewData["isAdmin"] == 1*/)
+    {
+        <div class="overlay" id="myOverlay">
+            <div class="popup-content">
+                <span class="close-button" onclick="closePopup()">&times;</span>
+
+                @foreach (var item in Model)
+                {
+                    var currentTime = DateTime.Now;
+                    var previousHour = currentTime.AddHours(-3);
+                    var itemTime = item.TimeNew;
+
+
+                    if (itemTime > previousHour && itemTime <= currentTime)
+                    {
+                        R++;
+                        <div>
+                            Alert: @item.CrimeType has been reported in
+                            <a style="color: #99b9e9" href="@item.Location">@item.Location</a> at
+                            @item.TimeNew.ToString("hh:mm tt")
+                        </div>
+                    }
+
+                }
+                @if (R == 0)
+                {
+                    <div>No crime has been reported in the previous hour</div>
+                }
+
+
+
+            </div>
+        </div>
+    }
+}
+
+@if (ViewData["isAdmin"] != null && (int)ViewData["isAdmin"] == 0)
+{
+    <p>
+        <a asp-action="Create">Create New</a>
+    </p>
+}
+<i class="fas fa-bell" id="bell-icon"></i>
+<div class="table-responsive">
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CrimeType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Location)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Gender)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TimeNew)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CrimeDescription)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CrimeType)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Location)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Gender)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TimeNew)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CrimeDescription)
+                </td>
+                <td>
+                    @if (ViewData["isAdmin"] != null && (int)ViewData["isAdmin"] == 0)
+                    {
+                        <a style="color:blue" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                    }
+
+                    | <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    @if (ViewData["isAdmin"] != null && (int)ViewData["isAdmin"] == 1)
+                    {
+                            <a style="color:red"  asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    }
+
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+</div>
+@{
+    if (ViewData["alert"] != null)
+    {
+        <script>
+            window.onload = showAlert;
+            function showAlert() {
+                alert("Your alert has been genrated successfully")
+            }
+        </script>
+    }
+}
+<script>
+    function showPopup() {
+        var overlay = document.getElementById("myOverlay");
+        overlay.style.display = "block";
+    }
+
+    function closePopup() {
+        var overlay = document.getElementById("myOverlay");
+        overlay.style.display = "none";
+    }
+
+    window.onload = showPopup();
+    function toggleAlerts() {
+        var alerts = document.querySelectorAll(".overlay");
+        for (var i = 0; i < alerts.length; i++) {
+            var overlay = alerts[i];
+            overlay.style.display = overlay.style.display === "block" ? "none" : "block";
+        }
+    }
+    document.getElementById("bell-icon").addEventListener("click", function () {
+        toggleAlerts();
+    });
+
+    window.onload = function () {
+    @if (ViewData["isAdmin"] != null && (int)ViewData["isAdmin"] == 1)
+    {
+        foreach (var item in Model)
+        {
+            var currentTime = DateTime.Now;
+            var previousHour = currentTime.AddHours(-3);
+            var itemTime = item.TimeNew;
+
+            if (itemTime > previousHour && itemTime <= currentTime)
+            {
+                <text>showPopup(@item.Id); </text>
+            }
+        }
+    }
+                    }
+</script>
+
+
+
+
